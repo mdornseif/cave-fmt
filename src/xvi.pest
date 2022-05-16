@@ -1,0 +1,35 @@
+// this is a https://en.wikipedia.org/wiki/Parsing_expression_grammar
+
+WHITESPACE = _{" "|"\t"|NEWLINE}
+NAME       = @{(ASCII_ALPHANUMERIC|"_"|".")+}
+
+NUMBER     = @{
+    "-"? ~ ("0"|ASCII_NONZERO_DIGIT ~ ASCII_DIGIT*) ~ ("." ~ ASCII_DIGIT*)?
+}
+COLOR      = @{ASCII_ALPHANUMERIC+}
+COORDINATE =  {NUMBER ~ NUMBER}
+
+// set XVIgrids {1.0 m}
+xvigrids =  {"XVIgrids" ~ "{" ~ NUMBER ~ ASCII_ALPHA+ ~ "}"}
+
+// set XVIstations {{1037.95 236.26 2.54}}
+station     =  {"{" ~ COORDINATE ~ NAME ~ "}"}
+xvistations =  {"XVIstations" ~ "{" ~ station* ~ "}"}
+
+// set XVIshots {{1623.27 1559.80 1620.91 1526.89}}
+shot     =  {"{" ~ COORDINATE ~ COORDINATE ~ "}"}
+xvishots =  {"XVIshots" ~ "{" ~ shot+ ~ "}"}
+
+// set XVIsketchlines {{brown  4002.36 412.60  4007.87 413.39  4011.81 414.17  4014.17 414.17}}
+scetchline     =  {"{" ~ COLOR ~ COORDINATE+ ~ "}"}
+xvisketchlines =  {"XVIsketchlines" ~ "{" ~ scetchline+ ~ "}"}
+
+// set XVIgrid {738.9763779527558 -109.84251968503936 39.370078740157474 0.0 0.0 39.370078740157474 84 93
+xvigrid =  {"XVIgrid" ~ "{" ~ COORDINATE ~ NUMBER ~ NUMBER ~ NUMBER ~ NUMBER ~ NUMBER ~ NUMBER ~ "}"}
+
+command   =  _{xvigrids|xvistations|xvishots|xvisketchlines|xvigrid}
+
+file =  {
+    SOI ~ ("set" ~ command)* ~ EOI
+}
+
