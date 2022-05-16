@@ -198,11 +198,11 @@ pub mod xvi {
         use super::parse_file;
         use crate::pest::*;
 
-        #[test]
-        fn parse() {
-            parse_file("/Users/md/Documents/AKKH-Vermessungen/windloch/scraps/windloch2021_g27_g122_g203_g204_p.xvi".to_string());
-            ()
-        }
+        // #[test]
+        // fn parse() {
+        //     parse_file("/Users/md/Documents/AKKH-Vermessungen/windloch/scraps/windloch2021_g27_g122_g203_g204_p.xvi".to_string());
+        //     ()
+        // }
 
         #[test]
         fn successful_parse() {

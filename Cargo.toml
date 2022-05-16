@@ -3,12 +3,10 @@ name = "cave-fmt"
 version = "0.1.0"
 edition = "2021"
 description = "Parse various cave /speleo related data formats"
-# homepage = "https://serde.rs/"
-repository = "hhttps://github.com/mdornseif/cave-fmt"
-
-# [[bin]]
-# name = "your_program_name"
-# path = "src/bin/bin.rs" # replace bin.rs with name of your file
+homepage = "https://github.com/mdornseif/cave-fmt"
+repository = "https://github.com/mdornseif/cave-fmt"
+license = "MIT OR Apache-2.0"
+keywords = ["speleo", "cave"]
 
 [dependencies]
 pest = "2.0"
