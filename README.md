@@ -1,6 +1,5 @@
 [![Crates.io](https://img.shields.io/crates/v/cave-fmt)](https://crates.io/crates/cave-fmt "Crates.io version")
 [![Documentation](https://img.shields.io/docsrs/cave-fmt)](https://docs.rs/cave-fmt "Documentation")
-
 [![GitHub activity](https://img.shields.io/github/last-commit/mdornseif/cave-fmt)](https://github.com/mdornseif/cave-fmt/commits "Commit activity")
 
 
