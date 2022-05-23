@@ -1,6 +1,6 @@
 [package]
 name = "cave-fmt"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 description = "Parse various cave /speleo related data formats"
 homepage = "https://github.com/mdornseif/cave-fmt"

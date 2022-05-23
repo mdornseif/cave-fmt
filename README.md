@@ -6,13 +6,14 @@
 Code for parsing various cave releated file formats.
 
 This library is there to parse and process data in various formats used by different
-cave surveying software packages. The focus is on following Software packages:
+cave surveying software packages. The focus is on reading and writing data related
+to following Software packages:
 
 * [Therion](https://github.com/therion/therion)
 * [TopoDroid](https://github.com/marcocorvi/topodroid)
-* [PocketTopo(https://paperless.bheeb.ch/PocketTopo13.html)
+* [PocketTopo](https://paperless.bheeb.ch/PocketTopo13.html)
 * [Survex](https://survex.com)
-* http://www.ubss.org.uk/terraintool/terraintool.php
+* [Terraintool](http://www.ubss.org.uk/terraintool/terraintool.php)
 
 Results are presented in a formats based on [vek](https://github.com/yoanlcq/vek).
 

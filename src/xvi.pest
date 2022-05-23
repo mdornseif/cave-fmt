@@ -1,4 +1,6 @@
 // this is a https://en.wikipedia.org/wiki/Parsing_expression_grammar
+// It is meant for parsing Therion XVI Files.
+// See https://docs.rs/cave-fmt/latest/cave_fmt/xvi/index.html
 
 WHITESPACE = _{" "|"\t"|NEWLINE}
 NAME       = @{(ASCII_ALPHANUMERIC|"_"|".")+}
